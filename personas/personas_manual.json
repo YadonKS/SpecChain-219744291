@@ -1,22 +1,154 @@
-{  "personas": [
+{
+  "personas": [
     {
       "id": "P1",
-      "name": "Frequent Activity Tracker",
-      "description": "A user who relies on the app to log workouts frequently and expects stable performance.",
+      "name": "Late-Night Sleepy Person",
+      "description": "Opens app at like 11pm, wants to pass out as soon as possible. Gets frustrated if there are too many menus or popups in the way.",
       "derived_from_group": "G1",
       "goals": [
-        "Track workouts consistently",
-        "Log activity quickly"      ],
+        "Fall asleep fast",
+        "Recognize the narrator without having to hunt for them",
+        "Just hit play and be done"
+      ],
       "pain_points": [
-        "App crashes during logging",
-        "Workout data sometimes disappears"      ],
+        "Searching while half asleep is torture",
+        "Premium popups ruin the vibe",
+        "Some 'short' sessions are actually way longer than advertised"
+      ],
       "context": [
-        "Logging activities immediately after workouts",
-        "Using the app during outdoor exercise"      ],
+        "Night use, often already in bed",
+        "Sometimes with headphones, sometimes phone speaker",
+        "Usually low patience at this time"
+      ],
       "constraints": [
-        "Logging must be reliable",
-        "Data should not be lost"       ],
+        "Should be low effort",
+        "Needs to start quickly most of the time",
+        "Cannot assume user wants to read long menus"
+      ],
       "evidence_reviews": [
-        "rev_12",
-        "rev_45"      ]
-    }  ] }
+        "3fd3498e-06ea-41fe-8830-f22150ac758a",
+        "31a57fee-ed1d-4701-84ba-e90e2d11b467"
+      ]
+    },
+    {
+      "id": "P2",
+      "name": "Sometime Meditator",
+      "description": "Uses the app when anxious but not super consistent. Some days they're all in, other days... not so much.",
+      "derived_from_group": "G2",
+      "goals": [
+        "Calm down when stressed",
+        "Find something that actually matches how they're feeling right now",
+        "Maybe build a habit? I don't know if it'll stick though"
+      ],
+      "pain_points": [
+        "Too many options = paralysis",
+        "Gets bored when it's the same stuff over and over",
+        "Confused whether to pick sleep or meditation when stressed"
+      ],
+      "context": [
+        "During work breaks or after stressful events",
+        "Sometimes late night instead of daytime",
+        "Will bounce between breathing, mindfulness and stories"
+      ],
+      "constraints": [
+        "Should feel friendly, not clinical",
+        "Good if there is a quick option",
+        "Navigation should not be confusing when stressed"
+      ],
+      "evidence_reviews": [
+        "904acc55-d963-4f90-bd06-4adeff7f891e",
+        "1cd88da9-ecaf-4b62-89eb-b47e8809023b"
+      ]
+    },
+    {
+      "id": "P3",
+      "name": "Skeptical Budget Person",
+      "description": "Watches money closely. Gets really mad if billing is unclear or if cancellation feels impossible.",
+      "derived_from_group": "G3",
+      "goals": [
+        "Understand what the price actually covers",
+        "Cancel in like 2 clicks not 10",
+        "Don't get random mystery charges"
+      ],
+      "pain_points": [
+        "Fine print is tiny and confusing",
+        "Cancel email says confirmed but they STILL got charged",
+        "Support takes 5 days to reply when ur being billed $20/mo for nothing"
+      ],
+      "context": [
+        "Mostly around trial start/end moments",
+        "Comparing monthly with yearly pricing",
+        "May contact support after being charged"
+      ],
+      "constraints": [
+        "Billing info has to be obvious",
+        "Needs a cancellation trail/receipt",
+        "One bad billing issue can cause churn"
+      ],
+      "evidence_reviews": [
+        "20b5a73e-28fa-4666-80b1-76537165ecf5",
+        "3e341906-06d2-492a-a357-2551a64767fb"
+      ]
+    },
+    {
+      "id": "P4",
+      "name": "Audio Perfectionist",
+      "description": "Really cares about voice quality. Notices immediately when audio is mediocre or when they've heard everything already.",
+      "derived_from_group": "G4",
+      "goals": [
+        "Find specific narrators and stick with them",
+        "App keeps adding new stuff so not boring",
+        "Control voice and music levels separately"
+      ],
+      "pain_points": [
+        "Can't find that one narrator they liked last month",
+        "Bad audio quality ruins everything",
+        "Feels like they've already heard all the stories"
+      ],
+      "context": [
+        "Mostly bedtime listening",
+        "Switches between story/music/soundscape",
+        "Sometimes compares with YouTube/free options"
+      ],
+      "constraints": [
+        "Needs basic but useful audio controls",
+        "Search/discovery should be decent",
+        "Low tolerance for repeating same content"
+      ],
+      "evidence_reviews": [
+        "6c7b5e5b-3ef2-4174-abd7-1ee0e10ed0f7",
+        "2fdce430-5c28-4635-b0cd-b132605803ae"
+      ]
+    },
+    {
+      "id": "P5",
+      "name": "Impatient Person",
+      "description": "Just wants stuff to work. No patience for lag or confusing buttons. Will leave if anything feels broken.",
+      "derived_from_group": "G5",
+      "goals": [
+        "Open app -> get content in like 3 taps",
+        "Search actually finds what they searched for",
+        "Updates don't randomly break stuff"
+      ],
+      "pain_points": [
+        "App takes forever to load",
+        "Search is broken - can't find basic stuff",
+        "Updates make the UI worse randomly"
+      ],
+      "context": [
+        "Often using app when already stressed/tired",
+        "Comes back after update and expects familiar flow",
+        "May use multiple devices"
+      ],
+      "constraints": [
+        "Basic stuff has to work. No excuses",
+        "Extra popups/screens = instant uninstall",
+        "Lag = instant trust loss"
+      ],
+      "evidence_reviews": [
+        "9ab0984d-80ec-4da2-ad17-564846feca8d",
+        "b329e371-4f27-47de-9f40-390de138149b"
+      ]
+    }
+  ]
+}

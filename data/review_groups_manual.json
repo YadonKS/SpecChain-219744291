@@ -2,11 +2,102 @@
   "groups": [
     {
       "group_id": "G1",
-      "theme": "App crashes during activity logging, THIS IS A AN EXAMPLE, PLEASE REMOVE ",
-      "review_ids": ["rev_12", "rev_33", "rev_45", "rev_89"],
+      "theme": "Sleep group - basically people who just want to pass out with some audio",
+      "review_ids": [
+        "3fd3498e-06ea-41fe-8830-f22150ac758a",
+        "21da4c2b-58fd-4eb2-a7d4-e6c3048590a0",
+        "66ab3d37-200a-40d7-80e3-363dd084f609",
+        "f095bf3f-b100-49e2-89b6-80047c7a912c",
+        "3cdc690f-54f5-47cc-bdec-a614db1e85a9",
+        "1c836529-f5d1-4f12-8481-fabd04ef5890",
+        "8a94f19e-112e-44c4-84fb-a0b547bea58f",
+        "50e8b3d7-08ff-4a53-a1fd-ec6478e5e956",
+        "8b315fb3-34cf-4ae8-818c-d36de2bc2526",
+        "31a57fee-ed1d-4701-84ba-e90e2d11b467"
+      ],
       "example_reviews": [
-        "The app crashes every time I log my run.",
-        "Logging workouts causes the app to freeze."
+        "mr mcconaugheys voice calming mesmerizing help drift sleep",
+        "get anything without entering credit card number garbage stick youtube sleeping video"
+      ]
+    },
+    {
+      "group_id": "G2",
+      "theme": "Meditation + anxiety folks. They want the app to help them chill but reviews show mixed expectations",
+      "review_ids": [
+        "904acc55-d963-4f90-bd06-4adeff7f891e",
+        "0f4eccd2-4bcd-44e3-a17d-0da7247ce6d7",
+        "8fa16615-8610-4b86-9a70-2d63cfc1dfc3",
+        "73f56be8-fb97-4674-adb0-2fa2fff59a2d",
+        "29b60b6c-c649-4607-946c-0c0f088ece7e",
+        "5e6527df-9125-409a-b0d3-9e2e8dfe2013",
+        "2bc44f03-5e94-4c7e-a4ec-3d267b987921",
+        "1cd88da9-ecaf-4b62-89eb-b47e8809023b",
+        "4409688a-53fe-444a-95d9-e3fbf962162b",
+        "ab417fe5-5250-479e-879c-795671a3846e"
+      ],
+      "example_reviews": [
+        "calm best app meditation helpful make really calm app easy navigate reliable",
+        "getting bored add sleep sound something"
+      ]
+    },
+    {
+      "group_id": "G3",
+      "theme": "Trial/billing anger - people got charged unexpectedly or can't figure out how to cancel. This is the angry group",
+      "review_ids": [
+        "d653d21f-589c-4391-b58f-feb6e3b8f7cb",
+        "59416d34-d9b9-4aac-bf40-666c2e33d6dc",
+        "51cb47fb-bf8b-4657-8ab5-e709fbcea019",
+        "452ac151-50e5-483a-a706-d8656249d359",
+        "43423521-78f1-477e-ad92-765a4d30c7ae",
+        "b329e371-4f27-47de-9f40-390de138149b",
+        "20b5a73e-28fa-4666-80b1-76537165ecf5",
+        "dba84797-cfca-44e9-8628-cace6fdb0f56",
+        "d24921b9-0683-4509-aed8-7a74b7602ab1",
+        "3e341906-06d2-492a-a357-2551a64767fb"
+      ],
+      "example_reviews": [
+        "received free trial canceled free trial keep charged",
+        "double charged ignored email phone number available return email money scam"
+      ]
+    },
+    {
+      "group_id": "G4",
+      "theme": "Picky about voices/audio quality and wants variety. Some also complain about content freshness",
+      "review_ids": [
+        "fcbdbfbc-f272-42b3-bb67-d5171231ac25",
+        "1cd88da9-ecaf-4b62-89eb-b47e8809023b",
+        "60ed9178-77a0-461c-aea1-888df5041616",
+        "ca1736ad-5421-4914-9d48-212dfc12a5fa",
+        "e0b5612d-0328-45ee-b3b7-d00f88f14dd3",
+        "6c7b5e5b-3ef2-4174-abd7-1ee0e10ed0f7",
+        "37db6fd8-9dc5-4a59-ad1a-412f3891d9bd",
+        "8ee5f676-f698-4882-ba5f-bb57857c0fd0",
+        "e655a601-95ca-4fa1-9a95-45aacc060e07",
+        "2fdce430-5c28-4635-b0cd-b132605803ae"
+      ],
+      "example_reviews": [
+        "narrator voice sometimes hard hear understand",
+        "telling keep thinking calm meditation need subscribe"
+      ]
+    },
+    {
+      "group_id": "G5",
+      "theme": "App is too slow or confusing. Search doesn't work great, login issues, performance varies. Basically UX/tech pain points",
+      "review_ids": [
+        "9ab0984d-80ec-4da2-ad17-564846feca8d",
+        "5784e390-e091-4e23-a68c-f80c57a29b3f",
+        "e7673f44-4314-4c59-8c0c-860df0a6e553",
+        "0b0f14d6-b216-49a2-b55b-2d2371404a7c",
+        "56d99302-1184-4800-96b2-51b2aee9ba9c",
+        "93a652fd-3eb7-4217-ba68-765352f95c14",
+        "08591cbd-7d1e-4565-a308-34eacbbfc97d",
+        "951fc818-e2b7-40ff-ae61-84910f0be405",
+        "752a007e-2e1f-4e61-8ba2-44c8a103d10b",
+        "b329e371-4f27-47de-9f40-390de138149b"
+      ],
+      "example_reviews": [
+        "app slow load play favorite",
+        "canceled subscription trail phase application still charged annual subscription fee"
       ]
     }
   ]}

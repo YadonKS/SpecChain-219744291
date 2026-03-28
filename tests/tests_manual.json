@@ -1,16 +1,277 @@
-
-{
+﻿{
   "tests": [
     {
-      "test_id": "T_auto_1",
-      "requirement_id": "FR1",
-      "scenario": "Workout Logging Stability",
+      "test_id": "T_manual_01",
+      "requirement_id": "FR_manual_01",
+      "scenario": "tap big sleep button when tired",
       "steps": [
-        "Open the workout logging screen",
-        "Enter workout details",
-        "Submit the workout"
+        "Just open it",
+        "find the button",
+        "Tap it"
       ],
-      "expected_result": "The workout is saved successfully and the application remains stable."
+      "expected_result": "Something should play pretty fast. don't want popups"
+    },
+    {
+      "test_id": "T_manual_02",
+      "requirement_id": "FR_manual_01",
+      "scenario": "button obvious enough after closing?",
+      "steps": [
+        "log in",
+        "find the sleep button",
+        "Close and come back",
+        "it's still there?"
+      ],
+      "expected_result": "yeah should be findable again, plays fast"
+    },
+    {
+      "test_id": "T_manual_03",
+      "requirement_id": "FR_manual_02",
+      "scenario": "filters actually filter stuff",
+      "steps": [
+        "go to sleep browsing",
+        "pick narrator John or whatever",
+        "set like 5-10 minutes",
+        "browse results"
+      ],
+      "expected_result": "mostly matches. not all random stuff mixed in"
+    },
+    {
+      "test_id": "T_manual_04",
+      "requirement_id": "FR_manual_02",
+      "scenario": "change filter and see if it changes",
+      "steps": [
+        "have some filters going",
+        "flip to different type",
+        "wait a sec",
+        "look at new results"
+      ],
+      "expected_result": "updates fine, mostly relevant items still"
+    },
+    {
+      "test_id": "T_manual_05",
+      "requirement_id": "FR_manual_03",
+      "scenario": "short stuff is actually short",
+      "steps": [
+        "click short section",
+        "look at times"
+      ],
+      "expected_result": "most like under 10 minutes or so. reasonable stuff"
+    },
+    {
+      "test_id": "T_manual_06",
+      "requirement_id": "FR_manual_03",
+      "scenario": "still short after refresh?",
+      "steps": [
+        "open short section",
+        "maybe sort it",
+        "refresh"
+      ],
+      "expected_result": "yeah should stay short mostly"
+    },
+    {
+      "test_id": "T_manual_07",
+      "requirement_id": "FR_manual_04",
+      "scenario": "it suggests stuff for stressed",
+      "steps": [
+        "hit recommendations",
+        "say I'm stressed",
+        "got like 10 minutes",
+        "see what comes"
+      ],
+      "expected_result": "shows multiple things that fit stressed and time"
+    },
+    {
+      "test_id": "T_manual_08",
+      "requirement_id": "FR_manual_04",
+      "scenario": "mood and short time works",
+      "steps": [
+        "recommendations page",
+        "select anxious",
+        "5 minutes available",
+        "load it"
+      ],
+      "expected_result": "suggestions seem anxiety-focused and mostly fit 5 minutes"
+    },
+    {
+      "test_id": "T_manual_09",
+      "requirement_id": "FR_manual_05",
+      "scenario": "save meditation + find later",
+      "steps": [
+        "open meditation",
+        "tap favorite",
+        "go to favorites"
+      ],
+      "expected_result": "it's there, can play from there"
+    },
+    {
+      "test_id": "T_manual_10",
+      "requirement_id": "FR_manual_05",
+      "scenario": "replay from favorites no search",
+      "steps": [
+        "open favorites",
+        "scroll find it",
+        "tap",
+        "play"
+      ],
+      "expected_result": "plays from favorites tab. done"
+    },
+    {
+      "test_id": "T_manual_11",
+      "requirement_id": "FR_manual_06",
+      "scenario": "see the price before paying",
+      "steps": [
+        "start trial",
+        "get to confirm screen",
+        "read billing area"
+      ],
+      "expected_result": "shows price, renewal date, trial length. clear enough"
+    },
+    {
+      "test_id": "T_manual_12",
+      "requirement_id": "FR_manual_06",
+      "scenario": "paid sub should show price too",
+      "steps": [
+        "go paid sub",
+        "confirm screen",
+        "check pricing area"
+      ],
+      "expected_result": "price and renew timing visible before final tap"
+    },
+    {
+      "test_id": "T_manual_13",
+      "requirement_id": "FR_manual_07",
+      "scenario": "cancel in like 2 to 3 taps",
+      "steps": [
+        "settings",
+        "sub settings",
+        "hit cancel",
+        "confirm"
+      ],
+      "expected_result": "done. confirmed somewhere"
+    },
+    {
+      "test_id": "T_manual_14",
+      "requirement_id": "FR_manual_07",
+      "scenario": "confirmation actually shows",
+      "steps": [
+        "finish cancel flow",
+        "see confirmation message?",
+        "check status page"
+      ],
+      "expected_result": "says canceled somewhere visible. good"
+    },
+    {
+      "test_id": "T_manual_15",
+      "requirement_id": "FR_manual_08",
+      "scenario": "billing history has info",
+      "steps": [
+        "open billing",
+        "look at transactions"
+      ],
+      "expected_result": "can tell when charged and why"
+    },
+    {
+      "test_id": "T_manual_16",
+      "requirement_id": "FR_manual_08",
+      "scenario": "see trial and renewal charges",
+      "steps": [
+        "history with both events",
+        "find trial entry",
+        "find renewal"
+      ],
+      "expected_result": "both show up. understandable"
+    },
+    {
+      "test_id": "T_manual_17",
+      "requirement_id": "FR_manual_09",
+      "scenario": "audio controls visible during playback",
+      "steps": [
+        "start guided",
+        "open controls",
+        "check what's available"
+      ],
+      "expected_result": "voice volume, background, speed. all there"
+    },
+    {
+      "test_id": "T_manual_18",
+      "requirement_id": "FR_manual_09",
+      "scenario": "controls actually work fast",
+      "steps": [
+        "play something",
+        "lower narrator",
+        "raise background",
+        "change speed",
+        "listen"
+      ],
+      "expected_result": "probably hears differences pretty quick"
+    },
+    {
+      "test_id": "T_manual_19",
+      "requirement_id": "FR_manual_10",
+      "scenario": "search by narrator name",
+      "steps": [
+        "search box",
+        "type narrator name",
+        "hit search"
+      ],
+      "expected_result": "results show their stuff, maybe a profile link"
+    },
+    {
+      "test_id": "T_manual_20",
+      "requirement_id": "FR_manual_10",
+      "scenario": "narrator page shows all their content",
+      "steps": [
+        "click narrator from results",
+        "look at list",
+        "all their sessions there?"
+      ],
+      "expected_result": "profile shows bunch of their stuff in one place"
+    },
+    {
+      "test_id": "T_manual_21",
+      "requirement_id": "FR_manual_11",
+      "scenario": "app opens and login works after update",
+      "steps": [
+        "install new version",
+        "launch it",
+        "close and reopen",
+        "log in"
+      ],
+      "expected_result": "starts fine. login ok. no crashes really"
+    },
+    {
+      "test_id": "T_manual_22",
+      "requirement_id": "FR_manual_11",
+      "scenario": "search and play still work after update",
+      "steps": [
+        "install update",
+        "search for something",
+        "play it"
+      ],
+      "expected_result": "search and play work. honestly good enough"
+    },
+    {
+      "test_id": "T_manual_23",
+      "requirement_id": "FR_manual_12",
+      "scenario": "search gives relevant results",
+      "steps": [
+        "search box",
+        "type sleep or something",
+        "submit"
+      ],
+      "expected_result": "results seem relevant, category labels visible"
+    },
+    {
+      "test_id": "T_manual_24",
+      "requirement_id": "FR_manual_12",
+      "scenario": "search filters work",
+      "steps": [
+        "do a search",
+        "apply filters",
+        "uncheck one",
+        "look at results"
+      ],
+      "expected_result": "updates fine. results stay mostly good. filters still visible"
     }
   ]
 }
