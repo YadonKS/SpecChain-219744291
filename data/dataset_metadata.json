@@ -1,0 +1,32 @@
+{
+  "app_name": "Calm - Sleep, Meditate, Relax",
+  "app_id": "com.calm.android",
+  "dataset_size": 1617,
+  "collection_method": "google-play-scraper pagination via Google Play public listing",
+  "collection_details": {
+    "lang": "en",
+    "country": "ca",
+    "requested_target": 2000,
+    "effective_target": 2000,
+    "minimum_requirement": 1000,
+    "maximum_requirement": 5000,
+    "estimated_total_reviews": 6495,
+    "collected_at_utc": "2026-03-28T08:52:06.344710+00:00"
+  },
+  "cleaning_decisions": {
+    "remove_duplicates": true,
+    "remove_empty_entries": true,
+    "remove_extremely_short_reviews": true,
+    "minimum_tokens_after_cleaning": 3,
+    "remove_punctuation": true,
+    "remove_special_characters": true,
+    "remove_emojis": true,
+    "convert_numbers_to_text": true,
+    "normalize_whitespace": true,
+    "lowercase": true,
+    "remove_stop_words": true,
+    "lemmatize": true
+  },
+  "dataset_size_raw": 2000,
+  "dataset_size_clean": 1617
+}
