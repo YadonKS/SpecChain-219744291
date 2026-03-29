@@ -1,35 +1,153 @@
 {
-  "manual": {
-    "dataset_size": 300,
-    "persona_count": 4,
-    "requirements_count": 8,
-    "tests_count": 10,
-    "traceability_links": 12,
-    "review_coverage": 0.63,
-    "traceability_ratio": 0.87,
-    "testability_rate": 0.75,
-    "ambiguity_ratio": 0.12
+  "summary": {
+    "title": "SpecChain Pipeline Metrics Comparison",
+    "description": "Comparative metrics across manual, automated, and hybrid pipeline implementations",
+    "dataset": {
+      "total_reviews": 1617,
+      "source": "data/reviews_clean.jsonl"
+    }
   },
-  "automated": {
-    "dataset_size": 300,
-    "persona_count": 4,
-    "requirements_count": 8,
-    "tests_count": 10,
-    "traceability_links": 12,
-    "review_coverage": 0.65,
-    "traceability_ratio": 0.88,
-    "testability_rate": 0.80, 
-    "ambiguity_ratio": 0.12
+  "core_metrics": {
+    "manual": {
+      "pipeline": "manual",
+      "personas_count": 5,
+      "requirements_count": 12,
+      "tests_count": 24,
+      "review_coverage": 0.0297,
+      "traceability_ratio": 1.0,
+      "testability_rate": 1.0
+    },
+    "automated": {
+      "pipeline": "automated",
+      "personas_count": 5,
+      "requirements_count": 12,
+      "tests_count": 12,
+      "review_coverage": 0.0371,
+      "traceability_ratio": 1.0,
+      "testability_rate": 1.0
+    },
+    "hybrid": {
+      "pipeline": "hybrid",
+      "personas_count": 5,
+      "requirements_count": 12,
+      "tests_count": 12,
+      "review_coverage": 0.0371,
+      "traceability_ratio": 1.0,
+      "testability_rate": 1.0
+    }
   },
-  "hybrid": {
-    "dataset_size": 300,
-    "persona_count": 4,
-    "requirements_count": 8,
-    "tests_count": 9,
-    "traceability_links": 12,
-    "review_coverage": 0.67,
-    "traceability_ratio": 0.88,
-    "testability_rate": 0.87, 
-    "ambiguity_ratio": 0.12
+  "detailed_comparison": {
+    "personas_count": {
+      "manual": 5,
+      "automated": 5,
+      "hybrid": 5,
+      "notes": "All pipelines derive 5 personas from the review groups (one per group)"
+    },
+    "requirements_count": {
+      "manual": 12,
+      "automated": 12,
+      "hybrid": 12,
+      "notes": "All pipelines define 12 functional requirements (1:1 mapping with personas not strict)"
+    },
+    "tests_count": {
+      "manual": 24,
+      "automated": 12,
+      "hybrid": 12,
+      "notes": "Manual pipeline includes comprehensive test coverage (2 tests per requirement); automated and hybrid have 1:1 requirement-to-test mapping"
+    },
+    "review_coverage": {
+      "manual": 0.0297,
+      "automated": 0.0371,
+      "hybrid": 0.0371,
+      "notes": "Percentage of total reviews explicitly grouped and evidenced. Manual uses 48 reviews from 1617 total; automated and automated both use 60 reviews"
+    },
+    "traceability_ratio": {
+      "manual": 1.0,
+      "automated": 1.0,
+      "hybrid": 1.0,
+      "notes": "All requirements are traced to source personas (100% traceability)"
+    },
+    "testability_rate": {
+      "manual": 1.0,
+      "automated": 1.0,
+      "hybrid": 1.0,
+      "notes": "All requirements have at least one test case (100% test coverage)"
+    }
+  },
+  "extended_metrics": {
+    "traceability_links": {
+      "manual": 91,
+      "automated": 89,
+      "hybrid": 89,
+      "description": "Total traced connections: groups→reviews + personas→groups + requirements→personas + tests→requirements"
+    },
+    "ambiguity_ratio": {
+      "manual": 0.5,
+      "automated": 0.4167,
+      "hybrid": 0.0833,
+      "description": "Percentage of requirements containing vague language terms (fast, quick, easy, simple, etc.)",
+      "analysis": {
+        "manual": "6 out of 12 requirements contain ambiguous language",
+        "automated": "5 out of 12 requirements contain ambiguous language",
+        "hybrid": "1 out of 12 requirements contains ambiguous language",
+        "interpretation": "Hybrid significantly improves clarity through selective human refinement"
+      }
+    }
+  },
+  "artifact_locations": {
+    "data": {
+      "manual": "data/review_groups_manual.json",
+      "automated": "data/review_groups_auto.json",
+      "hybrid": "data/review_groups_hybrid.json"
+    },
+    "personas": {
+      "manual": "personas/personas_manual.json",
+      "automated": "personas/personas_auto.json",
+      "hybrid": "personas/personas_hybrid.json"
+    },
+    "specifications": {
+      "manual": "spec/spec_manual.md",
+      "automated": "spec/spec_auto.md",
+      "hybrid": "spec/spec_hybrid.md"
+    },
+    "tests": {
+      "manual": "tests/tests_manual.json",
+      "automated": "tests/tests_auto.json",
+      "hybrid": "tests/tests_hybrid.json"
+    }
+  },
+  "key_insights": {
+    "test_coverage_strategy": "Manual pipeline invests 2× test cases per requirement for thorough scenario coverage, while automated and hybrid use 1:1 mapping for lean, focused testing",
+    "ambiguity_reduction": "Hybrid pipeline reduces ambiguous language by 83% compared to automated (1 vs 5 requirements), achieving 0.0833 ambiguity ratio through selective wording refinement of P2, P3, P5",
+    "review_evidence": "Automated and hybrid pipelines evidence 60 reviews (grouped into 5 groups of 12 each); manual pipeline uses 48 reviews (4 groups of 12, 1 group of 0), reflecting manual creation constraints",
+    "traceability_parity": "All three pipelines achieve perfect traceability (ratio=1.0) and testability (rate=1.0), demonstrating that all requirements are source-attributed and test-covered regardless of pipeline strategy",
+    "dataset_efficiency": "Using 60 grouped reviews from 1,617 total achieves 3.7% dataset coverage with full traceability and test coverage, balancing evidence depth with practical specification scope"
+  },
+  "comparison_narrative": {
+    "manual_strengths": [
+      "Comprehensive test coverage with 24 fine-grained test scenarios (2 per requirement)",
+      "Direct human judgment for all artifacts, minimizing automation bias",
+      "Evidence-based creation from initial coding/grouping work"
+    ],
+    "manual_limitations": [
+      "Lower review evidence (60 → 48 reviews), reflecting resource constraints",
+      "Higher ambiguity ratio (0.5) suggesting potential clarity improvements"
+    ],
+    "automated_strengths": [
+      "Rapid generation of complete specifications from review groups",
+      "Consistent algorithmic application across all artifacts",
+      "Moderate ambiguity (0.4167) balanced with automation speed"
+    ],
+    "automated_limitations": [
+      "1:1 test mapping may miss edge cases vs. manual's 2× coverage",
+      "No human refinement; inherits vagueness from review language"
+    ],
+    "hybrid_strengths": [
+      "Combines automated efficiency with selective human refinement",
+      "Dramatically improved clarity: 0.0833 ambiguity ratio (83% reduction vs. automated)",
+      "Balanced test coverage (1:1 mapping with improved acceptance criteria)",
+      "Evidence showing human judgment can refine generated specifications"
+    ],
+    "hybrid_approach": "Copy automated outputs, then selectively refine personas (P2, P3, P5) and requirements to match human quality expectations while preserving automation advantages"
   }
 }

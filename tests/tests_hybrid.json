@@ -1,16 +1,148 @@
 {
   "tests": [
     {
-      "test_id": "T_hybrid_1",
-      "requirement_id": "FR_hybrid_1",
-      "scenario": "Save a workout entry without crashing",
+      "test_id": "T_hybrid_01",
+      "requirement_id": "FR_hybrid_01",
+      "scenario": "Sleep Quick Start starts playback in one tap",
       "steps": [
-        "Open the workout logging feature",
-        "Enter workout information",
-        "Submit the workout"
+        "Launch the app and sign in with a valid account.",
+        "Navigate to the main sleep entry screen.",
+        "Tap Sleep Quick Start once.",
+        "Measure time to playback start and check for extra setup screens."
       ],
-      "expected_result": "The workout is saved successfully and the application does not crash.",
-      "notes": "Revised the expected result to match the updated hybrid requirement."
+      "expected_result": "Playback begins within 3 seconds and no additional setup screen is required."
+    },
+    {
+      "test_id": "T_hybrid_02",
+      "requirement_id": "FR_hybrid_02",
+      "scenario": "Sleep filters return only matching content",
+      "steps": [
+        "Launch the app and sign in with a valid account.",
+        "Open sleep browsing and apply narrator, duration range, and content type filters.",
+        "Load filtered results.",
+        "Verify each result against selected filters, then clear filters and confirm full list returns."
+      ],
+      "expected_result": "All returned items match selected filters, and clearing filters restores the unfiltered list."
+    },
+    {
+      "test_id": "T_hybrid_03",
+      "requirement_id": "FR_hybrid_03",
+      "scenario": "Short Sleep collection contains brief sessions",
+      "steps": [
+        "Launch the app and sign in with a valid account.",
+        "Open the Short Sleep collection.",
+        "Inspect duration metadata for listed sessions.",
+        "Record any session longer than 10 minutes."
+      ],
+      "expected_result": "Every listed Short Sleep session has a duration of 10 minutes or less."
+    },
+    {
+      "test_id": "T_hybrid_04",
+      "requirement_id": "FR_hybrid_04",
+      "scenario": "Mood and time selections drive meditation recommendations",
+      "steps": [
+        "Launch the app and sign in with a valid account.",
+        "Open recommendations and select one mood and one time range.",
+        "Generate recommendations.",
+        "Count returned sessions and check each session duration against selected range."
+      ],
+      "expected_result": "At least 5 sessions are returned, and each session duration falls within the selected time range."
+    },
+    {
+      "test_id": "T_hybrid_05",
+      "requirement_id": "FR_hybrid_05",
+      "scenario": "Favorite session appears in Favorites and plays directly",
+      "steps": [
+        "Launch the app and sign in with a valid account.",
+        "Open a guided session and mark it as Favorite.",
+        "Open Favorites.",
+        "Locate the saved session and start playback from Favorites."
+      ],
+      "expected_result": "The favorited session appears in Favorites and starts playback in one tap."
+    },
+    {
+      "test_id": "T_hybrid_06",
+      "requirement_id": "FR_hybrid_06",
+      "scenario": "Subscription confirmation shows complete billing details",
+      "steps": [
+        "Launch the app and sign in with a valid account.",
+        "Start a subscription flow and proceed to the final confirmation screen.",
+        "Inspect the billing section before confirming.",
+        "Verify presence of price, trial length, renewal date, and renewal amount on the same screen."
+      ],
+      "expected_result": "All required billing details are visible on the final confirmation screen before confirmation."
+    },
+    {
+      "test_id": "T_hybrid_07",
+      "requirement_id": "FR_hybrid_07",
+      "scenario": "In-app cancellation ends with explicit confirmation",
+      "steps": [
+        "Launch the app and sign in with a valid subscribed account.",
+        "Open subscription settings and initiate cancellation.",
+        "Complete the cancellation flow.",
+        "Check final confirmation message and account subscription status."
+      ],
+      "expected_result": "The system shows cancellation confirmation with effective date and updates subscription status to canceled."
+    },
+    {
+      "test_id": "T_hybrid_08",
+      "requirement_id": "FR_hybrid_08",
+      "scenario": "Billing history entries include required charge details",
+      "steps": [
+        "Launch the app and sign in with a valid account.",
+        "Open billing history.",
+        "Review multiple entries if available.",
+        "Verify each entry includes charge date, amount, plan or term, and transaction source/reference."
+      ],
+      "expected_result": "Every billing history entry includes charge date, amount, plan or term, and transaction source or reference."
+    },
+    {
+      "test_id": "T_hybrid_09",
+      "requirement_id": "FR_hybrid_09",
+      "scenario": "Voice/background controls update guided audio output quickly",
+      "steps": [
+        "Launch the app and sign in with a valid account.",
+        "Start guided audio playback.",
+        "Adjust voice volume and background volume controls separately.",
+        "Measure response time and verify updated levels remain active during current session."
+      ],
+      "expected_result": "Audio output reflects each volume change within 1 second and settings persist for the current session."
+    },
+    {
+      "test_id": "T_hybrid_10",
+      "requirement_id": "FR_hybrid_10",
+      "scenario": "Narrator search opens narrator page with related sessions",
+      "steps": [
+        "Launch the app and sign in with a valid account.",
+        "Search using a narrator name.",
+        "Open the narrator page from search results.",
+        "Confirm the page lists sessions attributed to that narrator."
+      ],
+      "expected_result": "User can open a narrator page from narrator search and view related sessions attributed to that narrator."
+    },
+    {
+      "test_id": "T_hybrid_11",
+      "requirement_id": "FR_hybrid_11",
+      "scenario": "Core workflows remain reliable after update",
+      "steps": [
+        "Install or update to the latest app version.",
+        "Launch the app and complete login.",
+        "Run search and start playback.",
+        "Observe for crashes, freezes, or blocking errors in each flow."
+      ],
+      "expected_result": "Startup, login, search, and playback flows complete without crash, freeze, or blocking error after update."
+    },
+    {
+      "test_id": "T_hybrid_12",
+      "requirement_id": "FR_hybrid_12",
+      "scenario": "Search results are categorized and respond to filter refinement",
+      "steps": [
+        "Launch the app and sign in with a valid account.",
+        "Enter a keyword query in search.",
+        "Inspect category labels on returned results.",
+        "Apply one or more filters and verify results update to matching items only."
+      ],
+      "expected_result": "Each result shows a category label, and applying filters updates the list to only matching items."
     }
   ]
 }

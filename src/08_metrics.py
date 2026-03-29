@@ -1,7 +1,6 @@
-"""Compute pipeline metrics for the automated SpecChain pipeline.
+"""Compute pipeline metrics for the SpecChain pipelines.
 
-This script computes automated-pipeline metrics and writes:
-- metrics/metrics_auto.json
+This script computes metrics for manual, automated, and hybrid pipelines.
 
 Metrics computed:
 - dataset_size
@@ -17,6 +16,7 @@ Metrics computed:
 
 from __future__ import annotations
 
+import argparse
 import json
 import re
 from pathlib import Path
@@ -27,10 +27,20 @@ BASE_DIR = Path(__file__).resolve().parents[1]
 
 REVIEWS_CLEAN_PATH = BASE_DIR / "data" / "reviews_clean.jsonl"
 REVIEW_GROUPS_AUTO_PATH = BASE_DIR / "data" / "review_groups_auto.json"
+REVIEW_GROUPS_HYBRID_PATH = BASE_DIR / "data" / "review_groups_hybrid.json"
+REVIEW_GROUPS_MANUAL_PATH = BASE_DIR / "data" / "review_groups_manual.json"
 PERSONAS_AUTO_PATH = BASE_DIR / "personas" / "personas_auto.json"
+PERSONAS_HYBRID_PATH = BASE_DIR / "personas" / "personas_hybrid.json"
+PERSONAS_MANUAL_PATH = BASE_DIR / "personas" / "personas_manual.json"
 SPEC_AUTO_PATH = BASE_DIR / "spec" / "spec_auto.md"
+SPEC_HYBRID_PATH = BASE_DIR / "spec" / "spec_hybrid.md"
+SPEC_MANUAL_PATH = BASE_DIR / "spec" / "spec_manual.md"
 TESTS_AUTO_PATH = BASE_DIR / "tests" / "tests_auto.json"
-OUTPUT_PATH = BASE_DIR / "metrics" / "metrics_auto.json"
+TESTS_HYBRID_PATH = BASE_DIR / "tests" / "tests_hybrid.json"
+TESTS_MANUAL_PATH = BASE_DIR / "tests" / "tests_manual.json"
+OUTPUT_AUTO_PATH = BASE_DIR / "metrics" / "metrics_auto.json"
+OUTPUT_HYBRID_PATH = BASE_DIR / "metrics" / "metrics_hybrid.json"
+OUTPUT_MANUAL_PATH = BASE_DIR / "metrics" / "metrics_manual.json"
 
 
 AMBIGUOUS_TERMS = {
@@ -109,21 +119,40 @@ def contains_ambiguous_language(text: str) -> bool:
 	return any(term in tokens for term in AMBIGUOUS_TERMS)
 
 
-def compute_automated_metrics() -> Dict[str, float | int | str]:
+def compute_pipeline_metrics(pipeline: str) -> Dict[str, float | int | str]:
+	"""Compute metrics for the specified pipeline (manual, automated, or hybrid)."""
+	if pipeline == "manual":
+		review_groups_path = REVIEW_GROUPS_MANUAL_PATH
+		personas_path = PERSONAS_MANUAL_PATH
+		spec_path = SPEC_MANUAL_PATH
+		tests_path = TESTS_MANUAL_PATH
+	elif pipeline == "automated":
+		review_groups_path = REVIEW_GROUPS_AUTO_PATH
+		personas_path = PERSONAS_AUTO_PATH
+		spec_path = SPEC_AUTO_PATH
+		tests_path = TESTS_AUTO_PATH
+	elif pipeline == "hybrid":
+		review_groups_path = REVIEW_GROUPS_HYBRID_PATH
+		personas_path = PERSONAS_HYBRID_PATH
+		spec_path = SPEC_HYBRID_PATH
+		tests_path = TESTS_HYBRID_PATH
+	else:
+		raise ValueError(f"Unsupported pipeline: {pipeline}")
+
 	dataset_size = count_jsonl_rows(REVIEWS_CLEAN_PATH)
 
-	review_groups_payload = read_json(REVIEW_GROUPS_AUTO_PATH)
+	review_groups_payload = read_json(review_groups_path)
 	groups = review_groups_payload.get("groups", []) if isinstance(review_groups_payload, dict) else review_groups_payload
 
-	personas_payload = read_json(PERSONAS_AUTO_PATH)
+	personas_payload = read_json(personas_path)
 	personas = personas_payload.get("personas", []) if isinstance(personas_payload, dict) else personas_payload
 	persona_count = len(personas)
 
-	spec_text = SPEC_AUTO_PATH.read_text(encoding="utf-8")
+	spec_text = spec_path.read_text(encoding="utf-8")
 	requirements = parse_requirements(spec_text)
 	requirements_count = len(requirements)
 
-	tests_payload = read_json(TESTS_AUTO_PATH)
+	tests_payload = read_json(tests_path)
 	tests = tests_payload.get("tests", [])
 	tests_count = len(tests)
 
@@ -164,7 +193,7 @@ def compute_automated_metrics() -> Dict[str, float | int | str]:
 	ambiguity_ratio = (ambiguous_requirements / requirements_count) if requirements_count else 0.0
 
 	return {
-		"pipeline": "automated",
+		"pipeline": pipeline,
 		"dataset_size": dataset_size,
 		"persona_count": persona_count,
 		"requirements_count": requirements_count,
@@ -178,11 +207,28 @@ def compute_automated_metrics() -> Dict[str, float | int | str]:
 
 
 def main() -> None:
-	metrics = compute_automated_metrics()
-	OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
-	with OUTPUT_PATH.open("w", encoding="utf-8") as f:
+	parser = argparse.ArgumentParser(description="Compute SpecChain pipeline metrics.")
+	parser.add_argument(
+		"--pipeline",
+		choices=["manual", "automated", "hybrid"],
+		default="automated",
+		help="Pipeline to evaluate (default: automated)",
+	)
+	args = parser.parse_args()
+
+	metrics = compute_pipeline_metrics(args.pipeline)
+	
+	if args.pipeline == "manual":
+		output_path = OUTPUT_MANUAL_PATH
+	elif args.pipeline == "automated":
+		output_path = OUTPUT_AUTO_PATH
+	else:  # hybrid
+		output_path = OUTPUT_HYBRID_PATH
+	
+	output_path.parent.mkdir(parents=True, exist_ok=True)
+	with output_path.open("w", encoding="utf-8") as f:
 		json.dump(metrics, f, indent=2)
-	print(f"Wrote: {OUTPUT_PATH}")
+	print(f"Wrote: {output_path}")
 	print(json.dumps(metrics, indent=2))
 
 
