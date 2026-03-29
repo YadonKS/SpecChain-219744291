@@ -1,15 +1,148 @@
 {
   "tests": [
     {
-      "test_id": "T_auto_1",
-      "requirement_id": "FR_auto_1",
-      "scenario": "Logging a workout without crashing",
+      "test_id": "T_auto_01",
+      "requirement_id": "FR_auto_01",
+      "scenario": "Verify sleep quick start launches content promptly",
       "steps": [
-        "Open the workout logging screen",
-        "Enter workout details",
-        "Submit the workout"
+        "Launch the application and sign in with a valid user account.",
+        "Navigate to the home or sleep entry screen.",
+        "Select the Sleep Quick Start action.",
+        "Observe content start behavior and prompt flow."
       ],
-      "expected_result": "The workout is saved successfully and the application remains stable."
+      "expected_result": "Given the user opens the app before bedtime, When the user selects Sleep Quick Start, Then playback shall begin within a short startup time and without unnecessary intermediate prompts."
+    },
+    {
+      "test_id": "T_auto_02",
+      "requirement_id": "FR_auto_02",
+      "scenario": "Verify sleep filters constrain result set",
+      "steps": [
+        "Launch the application and sign in with a valid user account.",
+        "Open sleep browsing and apply narrator, duration, and content-type filters.",
+        "Submit filtering options and load results.",
+        "Inspect returned items for filter alignment."
+      ],
+      "expected_result": "Given the user applies sleep filters, When filtered results are displayed, Then returned items shall match selected filter values with high relevance."
+    },
+    {
+      "test_id": "T_auto_03",
+      "requirement_id": "FR_auto_03",
+      "scenario": "Verify short sleep collection lists brief sessions",
+      "steps": [
+        "Launch the application and sign in with a valid user account.",
+        "Open the short sleep collection.",
+        "Review listed session durations.",
+        "Confirm the majority of entries are brief sessions."
+      ],
+      "expected_result": "Given the user opens the short sleep collection, When content is listed, Then most sessions shall fall within short-duration ranges suitable for quick bedtime use."
+    },
+    {
+      "test_id": "T_auto_04",
+      "requirement_id": "FR_auto_04",
+      "scenario": "Verify mood and time based recommendations",
+      "steps": [
+        "Launch the application and sign in with a valid user account.",
+        "Open recommendations and choose a mood and time budget.",
+        "Request personalized recommendations.",
+        "Inspect recommendation relevance to both inputs."
+      ],
+      "expected_result": "Given the user selects a mood and time budget, When recommendations are generated, Then the system shall present multiple sessions aligned with both inputs."
+    },
+    {
+      "test_id": "T_auto_05",
+      "requirement_id": "FR_auto_05",
+      "scenario": "Verify saved meditation is available in Favorites",
+      "steps": [
+        "Launch the application and sign in with a valid user account.",
+        "Open a meditation session and mark it as favorite.",
+        "Navigate to the Favorites section.",
+        "Open the saved item and start playback."
+      ],
+      "expected_result": "Given a session is marked as favorite, When the user opens Favorites, Then the saved session shall be visible and directly playable."
+    },
+    {
+      "test_id": "T_auto_06",
+      "requirement_id": "FR_auto_06",
+      "scenario": "Verify subscription billing details before confirmation",
+      "steps": [
+        "Launch the application and sign in with a valid user account.",
+        "Start a subscription or trial flow and proceed to the confirmation stage.",
+        "Inspect visible billing details before final confirmation.",
+        "Verify presence of price, trial terms, and renewal timing."
+      ],
+      "expected_result": "Given the user reaches subscription confirmation, When billing details are shown, Then price, trial terms, and renewal information shall be clearly visible before final confirmation."
+    },
+    {
+      "test_id": "T_auto_07",
+      "requirement_id": "FR_auto_07",
+      "scenario": "Verify in-app cancellation flow and confirmation",
+      "steps": [
+        "Launch the application and sign in with a valid user account.",
+        "Open subscription settings and initiate cancellation.",
+        "Complete all required cancellation actions.",
+        "Observe final confirmation message and subscription status."
+      ],
+      "expected_result": "Given the user initiates cancellation, When cancellation is completed, Then the system shall show clear confirmation and updated subscription status."
+    },
+    {
+      "test_id": "T_auto_08",
+      "requirement_id": "FR_auto_08",
+      "scenario": "Verify billing history entries contain charge details",
+      "steps": [
+        "Launch the application and sign in with a valid user account.",
+        "Open the billing history page.",
+        "Review at least one recent charge entry.",
+        "Verify date, amount, and charge type fields are present."
+      ],
+      "expected_result": "Given the user opens billing history, When entries are displayed, Then each entry shall include enough detail to identify charge origin and timing."
+    },
+    {
+      "test_id": "T_auto_09",
+      "requirement_id": "FR_auto_09",
+      "scenario": "Verify playback controls update audio behavior",
+      "steps": [
+        "Launch the application and sign in with a valid user account.",
+        "Start guided playback content.",
+        "Adjust narrator volume, background volume, and speed controls.",
+        "Observe whether playback output changes accordingly."
+      ],
+      "expected_result": "Given guided content is playing, When the user adjusts audio controls, Then playback output shall reflect the new settings with minimal delay."
+    },
+    {
+      "test_id": "T_auto_10",
+      "requirement_id": "FR_auto_10",
+      "scenario": "Verify narrator search opens narrator content page",
+      "steps": [
+        "Launch the application and sign in with a valid user account.",
+        "Open search and submit a narrator name query.",
+        "Open the narrator-specific result or profile page.",
+        "Review listed related sessions in that view."
+      ],
+      "expected_result": "Given the user searches by narrator name, When results are shown, Then the user shall be able to open a narrator page and browse related content in one place."
+    },
+    {
+      "test_id": "T_auto_11",
+      "requirement_id": "FR_auto_11",
+      "scenario": "Verify core workflows remain stable after update",
+      "steps": [
+        "Launch the application and sign in with a valid user account.",
+        "Install or launch the latest application build.",
+        "Execute startup, login, search, and playback workflows.",
+        "Observe whether any blocking failures occur."
+      ],
+      "expected_result": "Given a new app version is installed, When core workflows are executed, Then startup, login, search, and playback shall complete without blocking failures."
+    },
+    {
+      "test_id": "T_auto_12",
+      "requirement_id": "FR_auto_12",
+      "scenario": "Verify search relevance and filter refinement behavior",
+      "steps": [
+        "Launch the application and sign in with a valid user account.",
+        "Run a keyword search from the main search interface.",
+        "Inspect initial relevance of returned results.",
+        "Apply category filters and verify refined results update correctly."
+      ],
+      "expected_result": "Given the user submits a keyword query, When search results load, Then results shall be relevant and include category labels and functional filters."
     }
   ]
 }

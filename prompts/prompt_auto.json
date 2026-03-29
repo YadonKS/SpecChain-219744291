@@ -1,3 +1,21 @@
 {
-    "prompt": ""
+  "prompt": "In this task, you will construct an automated pipeline that generates personas, specifications, and validation tests from the dataset using Python scripts and LLM prompting. All artifacts in this task must be generated automatically using the cleaned dataset: data/reviews_clean.jsonl. The automated pipeline must produce the same types of artifacts as the manual pipeline so that the outputs can be compared. This script in src/05_personas_auto.py must load the cleaned dataset and automatically group similar reviews using a clustering or grouping approach. Acceptable approaches include semantic similarity grouping, embedding clustering, or LLM-based grouping, or a combination of them, in any way that generates meaningful results. The script should produce review groups similar (not identical) to those created manually. Save the results in: data/review_groups_auto.json. Each group must contain at least several related reviews and clearly represent a common theme. Save the prompt you used for this automation in prompts/prompt_auto.json. This time we want to make it as perfect, rational, and consistent as possible",
+  "actual_user_prompt": "In this task, you will construct an automated pipeline that generates personas, specifications, and validation tests from the dataset using Python scripts and LLM prompting. All artifacts in this task must be generated automatically using the cleaned dataset: data/reviews_clean.jsonl. The automated pipeline must produce the same types of artifacts as the manual pipeline so that the outputs can be compared. This script in src/05_personas_auto.py must load the cleaned dataset and automatically group similar reviews using a clustering or grouping approach. Acceptable approaches include semantic similarity grouping, embedding clustering, or LLM-based grouping, or a combination of them, in any way that generates meaningful results. The script should produce review groups similar (not identical) to those created manually. Save the results in: data/review_groups_auto.json. Each group must contain at least several related reviews and clearly represent a common theme. Save the prompt you used for this automation in prompts/prompt_auto.json. This time we want to make it as perfect, rational, and consistent as possible",
+  "task": "Automatically group cleaned user reviews into coherent themes for persona/spec/test generation",
+  "persona_generation_prompt": "From each grouped review cluster, synthesize one structured persona object with fields: id, name, description, derived_from_group, goals, pain_points, context, constraints, evidence_reviews. Use consistent professional language and preserve group-level traceability.",
+  "dataset": "data/reviews_clean.jsonl",
+  "system_prompt": "You are a rigorous software requirements analyst. Group reviews into exactly five non-overlapping thematic clusters. Optimize for semantic coherence, consistency, and traceability. Avoid vague labels and ensure each group has a clearly defined intent.",
+  "user_prompt_template": "Input: Cleaned app reviews with reviewId and normalized text. Output JSON schema: {groups:[{group_id, theme, review_ids, example_reviews}]}. Rules: (1) exactly 5 groups, (2) no duplicate review IDs across groups, (3) each group must represent a distinct theme, (4) themes should be concise and professional, (5) preserve traceability through review_ids.",
+  "quality_constraints": [
+    "high semantic similarity within groups",
+    "clear theme separability across groups",
+    "deterministic and reproducible outputs",
+    "minimum several reviews per group"
+  ],
+  "selection_strategy": {
+    "method": "weighted semantic scoring + overlap fallback",
+    "groups": 5,
+    "reviews_per_group": 12,
+    "min_group_size": 8
+  }
 }

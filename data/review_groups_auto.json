@@ -1,12 +1,113 @@
 {
   "groups": [
     {
-      "group_id": "A1",
-      "theme": "Workout logging issues",
-      "review_ids": ["rev_12", "rev_33", "rev_41", "rev_92"],
+      "group_id": "G1",
+      "theme": "Sleep and bedtime support",
+      "review_ids": [
+        "523ea632-d79b-48e7-8887-4c014e103eb3",
+        "2cffc8f6-6307-4ad5-8262-b4ad2c458e6a",
+        "94b156d9-a23e-445f-97c1-a847e09df580",
+        "26a5fc58-3df3-4191-9b64-e03411fe2d41",
+        "fd47ac9e-a0d6-4076-a6b8-b001c7f2c9df",
+        "39a391bd-8e80-4e99-8fa4-ee712f102ddd",
+        "70d30b3d-f8d8-481e-ba3c-c581afa69c9a",
+        "dc34d566-3378-40d5-87d7-10b4c26bfb8e",
+        "718c8c7f-a046-4dc7-9bcf-583e68cc42ce",
+        "4f81538e-4236-4dbc-bf02-f91e78a3f7cf",
+        "6ae5c5be-53f3-45dc-a8a7-15bdb136f08c",
+        "1de9d622-ffda-4b4a-9902-f6dc4967491f"
+      ],
       "example_reviews": [
-        "The app crashes whenever I try to log a run.",
-        "Logging workouts causes the app to freeze."
+        "sleep check feature work enter anything affected sleep last night method capturing hour sleep also flawed hour sleep determined bedtime wake take time fall asleep interrupted disturbed sleep disappointing hoping use app help sleep quality",
+        "great help ran anxiety block bad bout pneumonia app provides wide range therapy soothe calm help fall asleep naturally using soundscapes found inspired nature power human voice narrarated bedtime story guided affirmation fave lyonwood story never fail put night matter anxious never make end tale like light"
+      ]
+    },
+    {
+      "group_id": "G2",
+      "theme": "Meditation and stress relief",
+      "review_ids": [
+        "d1c745f6-2c70-4601-b8ed-16ed386b7f8c",
+        "faa9c148-6de1-4946-8e0d-a1a77b9616e8",
+        "8ff8609c-9685-4968-9e3e-62e2ea9db5c6",
+        "9c7a8d02-f88d-47c0-9a68-e760b2e8b5a2",
+        "3a35cd4d-d9af-44b6-a99f-d05986343986",
+        "3cb7d021-bd68-43d9-8db7-ef364cc17fda",
+        "a80c7a08-f2ab-4a31-a899-56756491a922",
+        "3c5f5aaa-f501-4376-b5e1-32735d15c433",
+        "b661c864-9ead-4ba0-afac-5921a0fd0644",
+        "6859da90-f12f-4afa-af16-ae0846d9d071",
+        "418cb240-7f7f-4a4f-8f6e-e04301369eff",
+        "93425704-f4bc-432f-944a-6beaceb8c9a8"
+      ],
+      "example_reviews": [
+        "best app guided meditation hand plenty short meditation pull anytime feeling anxious daily meditation help get started day specific meditation like meeting studying general anxiety etc help get right state mind soundscapes allow focus peace get work done overall best meditation focus app",
+        "effective tool meditation process tackle stress anxiety"
+      ]
+    },
+    {
+      "group_id": "G3",
+      "theme": "Pricing, trials, and billing issues",
+      "review_ids": [
+        "d5972a84-dc89-46a4-a67c-418c7e0127fd",
+        "aeb40880-4cbf-47d2-ae46-910df7173066",
+        "788de07f-6f0e-4779-9a90-254a5f076f4f",
+        "cae292bf-0a08-4e1e-a776-8566445fa683",
+        "f3364aad-d067-4310-ad8b-4d064227ba3f",
+        "59416d34-d9b9-4aac-bf40-666c2e33d6dc",
+        "20b5a73e-28fa-4666-80b1-76537165ecf5",
+        "fdc6181e-3862-411d-9209-4919dd10d355",
+        "f321adfa-0aa4-441e-8049-f8621f2ef1f2",
+        "78970e15-6d89-4fe1-9714-6d66469f3884",
+        "596f2da5-b130-4056-b7de-2d9b76d4d3b5",
+        "ca27be5f-4982-4902-ad4d-1cc4e51c2436"
+      ],
+      "example_reviews": [
+        "trial notify charged card thank keeping subscription got email notifying charged seventy nine ninety nine give refund even two day reported giving reminder email notification letting know upcoming charge happened",
+        "scam fraud extra high price subscription two hundred time listed zero ninety nine google play store mi advertisement deceiving false price point way cancel phone notify free subscription end confirm want start paying extra high price subscription go behind back charge credit card without explicit consent high price two hundred time higher google pay listing app cost zero ninety nine"
+      ]
+    },
+    {
+      "group_id": "G4",
+      "theme": "Audio quality and content variety",
+      "review_ids": [
+        "3c806ce6-a4ac-4a6b-b266-f494bbbcc04d",
+        "722e711c-46b2-47c7-87a9-4a0cf80b5a64",
+        "c4e9ffb0-1721-465e-aa7e-fe71475c6a6b",
+        "a73098fa-c988-42ea-99bd-c85a1d854155",
+        "a6ad50f5-2adb-4942-886a-c4d2c5a07ae5",
+        "0f76cd0e-0fb0-40ab-8ee0-ff5f5557623e",
+        "6c7b5e5b-3ef2-4174-abd7-1ee0e10ed0f7",
+        "0e2a804e-cca3-42a5-95b7-56f7b80e2a86",
+        "2eae0f87-7520-4fd0-97cc-de90eb792516",
+        "1f87ee1c-a5a3-46a5-8c75-39d379a32ea2",
+        "83f476e8-947b-48cc-b1b0-a59373654128",
+        "b3cbc6e3-aa68-4dd9-ba96-ad1ae2385cef"
+      ],
+      "example_reviews": [
+        "happened volume recent update voice whisper quiet turn background sound almost zero hear narrator use lot sleep longer drown noise due issue sad sleepy",
+        "audio issue would love give five star content platform brilliant issue audio occasionally voice crack sound like water robot sleep story medication please fix"
+      ]
+    },
+    {
+      "group_id": "G5",
+      "theme": "App usability and technical reliability",
+      "review_ids": [
+        "36bb3344-963e-4cb3-b384-a5338b1e7846",
+        "083b7f24-a967-4bf3-a3d0-506407d71c7d",
+        "3d2bf911-48aa-44a6-becd-ea68d92dcb5a",
+        "7d8aa2f6-75b4-45a9-a1fe-c8afe0734b70",
+        "9ab0984d-80ec-4da2-ad17-564846feca8d",
+        "2a49db70-0ef6-40b7-802d-f538941273ac",
+        "945755d4-5831-409d-8da3-cec9f96446b4",
+        "7e980ec7-2092-4fe2-8f76-3f672ed916da",
+        "e0b5612d-0328-45ee-b3b7-d00f88f14dd3",
+        "0dd6d7a3-0441-4def-930f-356d7362c2da",
+        "08591cbd-7d1e-4565-a308-34eacbbfc97d",
+        "37035628-45af-4d47-975a-a4e4dfb5326d"
+      ],
+      "example_reviews": [
+        "year watched app used love become pretty much garbage thirty second meditation star poorly made content search engine working badly bug disturb entire experience keep using exact feature year ago far better didnt feel like goal get pure data get daily dopamine hit actually get calmer",
+        "long time subscriber disappointed problem developed app past month meditation freeze stop working screen lock render app basically useless ongoing number month reported many user sign anything fixed seeking replacement app"
       ]
     }
   ]

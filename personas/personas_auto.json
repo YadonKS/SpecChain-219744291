@@ -1,0 +1,154 @@
+{
+  "personas": [
+    {
+      "id": "P1",
+      "name": "Sleep-Focused Evening User",
+      "description": "Uses the app mainly before bed and expects low-friction access to calming sleep content. Salient signals include: sleep, story, calm.",
+      "derived_from_group": "G1",
+      "goals": [
+        "Start a sleep session quickly with minimal setup",
+        "Find narrators and sleep content that work consistently",
+        "Use short bedtime sessions when time is limited"
+      ],
+      "pain_points": [
+        "Too many taps or prompts before playback",
+        "Inconsistent sleep content discovery late at night",
+        "Session length mismatch for quick bedtime use"
+      ],
+      "context": [
+        "Primary usage window is late evening",
+        "Often uses headphones or low speaker volume",
+        "Prefers predictable and repeatable content flow"
+      ],
+      "constraints": [
+        "Navigation must be simple under low attention",
+        "Playback should start quickly and reliably",
+        "Search and filtering must remain straightforward"
+      ],
+      "evidence_reviews": [
+        "523ea632-d79b-48e7-8887-4c014e103eb3",
+        "2cffc8f6-6307-4ad5-8262-b4ad2c458e6a"
+      ]
+    },
+    {
+      "id": "P2",
+      "name": "Stress-Management Meditation User",
+      "description": "Uses guided meditation to regulate stress and anxiety and wants recommendations that match mood and available time. Salient signals include: meditation, sleep, stress.",
+      "derived_from_group": "G2",
+      "goals": [
+        "Find meditation options aligned with current emotional state",
+        "Maintain a practical routine across variable schedules",
+        "Access concise sessions for short breaks"
+      ],
+      "pain_points": [
+        "Choice overload when selecting sessions",
+        "Recommendation quality varies across moods",
+        "Difficulty resuming preferred sessions quickly"
+      ],
+      "context": [
+        "Used during work breaks and post-stress periods",
+        "Session duration is often constrained",
+        "Alternates between meditation and sleep content"
+      ],
+      "constraints": [
+        "Recommendations should be relevant and concise",
+        "Favorite and history paths must be reliable",
+        "Flow should reduce cognitive load during stress"
+      ],
+      "evidence_reviews": [
+        "d1c745f6-2c70-4601-b8ed-16ed386b7f8c",
+        "faa9c148-6de1-4946-8e0d-a1a77b9616e8"
+      ]
+    },
+    {
+      "id": "P3",
+      "name": "Billing-Conscious Subscriber",
+      "description": "Evaluates subscription value carefully and requires transparent billing, renewal, and cancellation behavior. Salient signals include: trial, free, charged.",
+      "derived_from_group": "G3",
+      "goals": [
+        "Understand exact cost and renewal timing before confirmation",
+        "Cancel or change plans without hidden steps",
+        "Review transaction history for charge verification"
+      ],
+      "pain_points": [
+        "Unclear trial-to-paid transition messaging",
+        "Unexpected charges and refund friction",
+        "Low confidence in cancellation completion"
+      ],
+      "context": [
+        "High attention around trial and renewal windows",
+        "Compares subscription options before commitment",
+        "Escalates quickly when charges seem incorrect"
+      ],
+      "constraints": [
+        "Billing details must be explicit and prominent",
+        "Cancellation confirmation must be unambiguous",
+        "History should support fast dispute resolution"
+      ],
+      "evidence_reviews": [
+        "d5972a84-dc89-46a4-a67c-418c7e0127fd",
+        "aeb40880-4cbf-47d2-ae46-910df7173066"
+      ]
+    },
+    {
+      "id": "P4",
+      "name": "Audio-Quality and Content-Curation User",
+      "description": "Selects sessions based on narrator quality, sound balance, and content freshness, with low tolerance for audio defects. Salient signals include: sound, voice, content.",
+      "derived_from_group": "G4",
+      "goals": [
+        "Find and reuse preferred narrators efficiently",
+        "Control voice and background balance during playback",
+        "Access sufficient content variety over time"
+      ],
+      "pain_points": [
+        "Audio artifacts or low narrator clarity",
+        "Weak narrator-based search and discovery",
+        "Perceived repetition in available content"
+      ],
+      "context": [
+        "Often uses long-form sessions before sleep",
+        "Quality expectations are high for immersion",
+        "Actively compares narrator and sound profiles"
+      ],
+      "constraints": [
+        "Audio settings must apply immediately",
+        "Narrator catalog paths should be discoverable",
+        "Content updates should remain visible and frequent"
+      ],
+      "evidence_reviews": [
+        "3c806ce6-a4ac-4a6b-b266-f494bbbcc04d",
+        "722e711c-46b2-47c7-87a9-4a0cf80b5a64"
+      ]
+    },
+    {
+      "id": "P5",
+      "name": "Reliability-First Daily User",
+      "description": "Uses the app frequently and prioritizes performance, stability, and predictable behavior across updates. Salient signals include: year, want, search.",
+      "derived_from_group": "G5",
+      "goals": [
+        "Launch and access target content with minimal delay",
+        "Use search and playback without regression",
+        "Trust that updates preserve core workflows"
+      ],
+      "pain_points": [
+        "Slow load times and occasional freezes",
+        "Search inconsistency and missing expected results",
+        "Feature regressions after app updates"
+      ],
+      "context": [
+        "Used in short, frequent sessions throughout the day",
+        "Often returns to known content paths",
+        "Experience quality strongly affects retention"
+      ],
+      "constraints": [
+        "Core paths must remain stable after updates",
+        "Performance issues should be rare and recoverable",
+        "Error states must be clear and actionable"
+      ],
+      "evidence_reviews": [
+        "36bb3344-963e-4cb3-b384-a5338b1e7846",
+        "083b7f24-a967-4bf3-a3d0-506407d71c7d"
+      ]
+    }
+  ]
+}
